@@ -1,0 +1,129 @@
+
+body{
+	background-color: black;
+}
+.letters{
+	color: white;
+position: absolute;
+text-align: center;
+left: 50%;
+/*top: 10%;*/
+/*margin:2%;*/
+font-size: 8vh;
+line-height: 6vh;
+font-family: covik-sans-mono, sans-serif;
+font-weight: 700;
+font-style: normal;
+text-decoration: none;
+
+
+margin: 0;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.poster{
+	color: white;
+	
+
+	width: 90%;
+	font-size: 8vh;
+	line-height: 6vh;
+
+	font-family: covik-sans-mono, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	text-decoration: none;
+	text-align: center;
+
+	margin: 0;
+  	position: absolute;
+  	top: 35%;
+ 	left: 50%;
+ 	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+
+}
+
+.dmodel{
+	color: white;
+	position: absolute;
+	left: 40%;
+	top: 30%;
+	margin: 2%;
+	font-size: 8vh;
+	line-height: 6vh;
+	font-family: covik-sans-mono, sans-serif;
+font-weight: 700;
+font-style: normal;
+text-decoration: none;
+
+
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.clark{
+	color: white;
+	position: absolute;
+	left: 40%;
+	top: 40%;
+	margin: 2%;
+	font-size: 8vh;
+		line-height: 5vh;
+
+	font-family: covik-sans-mono, sans-serif;
+font-weight: 700;
+font-style: normal;
+text-decoration: none;
+	margin: 0;
+	position: absolute;
+	top: 65%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+
+}
+
+.reading{
+	color: white;
+	position: absolute;
+	top: 20%;
+	font-size: 5vh;
+	font-family: covik-sans-mono, sans-serif;
+font-weight: 700;
+font-style: normal;
+text-decoration: none;
+}
+.tablo{
+	color: white;
+	position: absolute;
+	top: 30%;
+	font-size: 5vh;
+	font-family: covik-sans-mono, sans-serif;
+font-weight: 700;
+font-style: normal;
+text-decoration: none;
+}
+.inspo{
+	color: white;
+	position: absolute;
+	top: 40%;
+	font-size: 5vh;
+	font-family: covik-sans-mono, sans-serif;
+font-weight: 700;
+font-style: normal;
+text-decoration: none;
+}
+
+
+
+
+
