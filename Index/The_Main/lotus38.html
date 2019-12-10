@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lotus 33 formula 1 championship</title>
+
+
+
+	<style type="text/css">
+	#map{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		/*left: 15%;*/
+	}	
+
+	/*#menu{
+		position: relative;
+		height: 100%;
+		widows: 20%;
+	}*/
+
+
+
+
+
+	</style>
+
+
+
+</head>
+<body>
+
+
+
+<div id="map"></div>
+
+<script type="text/javascript">
+	
+	// function initMap(){
+	// 	var options = {
+	// 		zoom: 15,
+	// 		center:{lat:56.385150, lng:-2.993130}
+	// 	}
+	// 	// use this for styling 
+	// 	// https://mapstyle.withgoogle.com
+	// 	// https://developers.google.com/maps/documentation/javascript/styling
+
+
+	// 	var map = new google.maps.Map(document.getElementById('map'), options);
+
+
+ // var marker = new google.maps.Marker({
+ //    position: {lat:56.385150, lng:-2.993130},
+ //    map: map,
+ //    title: 'Hello World!'
+ //  });
+	// }
+
+ function initMap(){
+		var options = {
+			zoom: 1,
+			center:{lat:56.385150, lng:-2.993130}
+		}
+
+		var map = new google.maps.Map(document.getElementById('map'), options);
+
+
+		var map = new
+		google.maps.Map(document.getElementById('map'),options);
+
+		// var marker = new google.maps.Marker({
+		// 	position:{lat:56.385150, lng:-2.993130},
+		// 	map:map,
+		// });
+
+		// var infoWindow = new google.maps.InfoWindow({
+		// 	content: '<h1> gg </h1>'
+		// });
+
+		// marker.addListener('click', function(){
+		// 	infoWindow.open(map, marker);
+		// })
+
+
+
+		addMarker({
+			coords:{lat:39.788150, lng:-86.238690},
+			content:'<h1> Indianapolis 500 </h1><h2> Indianapolis, May 31st </h2><p> Won Indy 500 for first time. It was first time when overseas team won it</p><iframe width="560" height="315" src="https://www.youtube.com/embed/4waEZ4Fr2r8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+			});
+
+
+
+
+
+
+
+
+		function addMarker(props){
+			var marker = new google.maps.Marker({
+			position:props.coords,
+			map:map,
+		});
+			if(props.content){
+			var infoWindow = new google.maps.InfoWindow({
+			content: props.content
+		});
+
+		marker.addListener('click', function(){
+			infoWindow.open(map, marker);
+		})
+		}
+
+		}
+
+
+
+
+}
+
+
+
+
+</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPPqa67ybpvOLl7lsSZr5deWxFbSedyYA&callback=initMap"
+    async defer></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
+
