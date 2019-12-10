@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lotus 33 formula 1 championship</title>
+
+
+
+	<style type="text/css">
+	#map{
+		position: absolute;
+		left: 5%;
+		height: 100%;
+		width: 100%;
+		/*left: 15%;*/
+	}	
+
+	/*#menu{
+		position: relative;
+		height: 100%;
+		widows: 20%;
+	}*/
+
+
+
+
+
+	</style>
+
+
+
+</head>
+<body>
+
+
+
+<div id="map"></div>
+
+<script type="text/javascript">
+	
+	// function initMap(){
+	// 	var options = {
+	// 		zoom: 15,
+	// 		center:{lat:56.385150, lng:-2.993130}
+	// 	}
+	// 	// use this for styling 
+	// 	// https://mapstyle.withgoogle.com
+	// 	// https://developers.google.com/maps/documentation/javascript/styling
+
+
+	// 	var map = new google.maps.Map(document.getElementById('map'), options);
+
+
+ // var marker = new google.maps.Marker({
+ //    position: {lat:56.385150, lng:-2.993130},
+ //    map: map,
+ //    title: 'Hello World!'
+ //  });
+	// }
+
+ function initMap(){
+		var options = {
+			zoom: 1,
+			center:{lat:56.385150, lng:-2.993130}
+		}
+
+		var map = new google.maps.Map(document.getElementById('map'), options);
+
+
+		var map = new
+		google.maps.Map(document.getElementById('map'),options);
+
+		// var marker = new google.maps.Marker({
+		// 	position:{lat:56.385150, lng:-2.993130},
+		// 	map:map,
+		// });
+
+		// var infoWindow = new google.maps.InfoWindow({
+		// 	content: '<h1> gg </h1>'
+		// });
+
+		// marker.addListener('click', function(){
+		// 	infoWindow.open(map, marker);
+		// })
+
+
+
+		addMarker({
+			coords:{lat:-37.215266, lng:174.918838},
+			content:'<h1> New Zealand GP </h1><h2> Pukekohe, January 9th </h2><p> Retired from the race </p><iframe width="560" height="315" src="https://www.youtube.com/embed/mW_EWR1bxOk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+			});
+		addMarker({
+			coords:{lat:-40.626904, lng:175.266227},
+			content:'<h1> Levin Tasman </h1><h2> Levin, January 16th </h2><p> Finished 1st </p>'
+		});
+		
+		addMarker({
+			coords:{lat:-43.551389, lng:172.551667},
+			content:'<h1> Lady Wigram Trophy </h1><h2> Wigram, January 23rd </h2><p>Finished 1st</p>'
+		});
+
+
+		addMarker({
+			coords:{lat:-46.441412, lng:168.266394},
+			content:'<h1> Teretonga Tasman  </h1><h2> Teretonga Park, January 30th </h2><p>Finished 1st</p>'
+		});
+
+
+		
+
+		addMarker({
+			coords:{lat:-33.915160, lng:150.944250},
+			content:'<h1> Warwick Farm Tasman </h1><h2> Warwick Farm, February 14th </h2><p>Finished 1st</p><iframe width="560" height="315" src="https://www.youtube.com/embed/XZf8ZI3pqRA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+		});
+
+
+		addMarker({
+			coords:{lat:-37.949695, lng:145.167008},
+			content:'<h1> Sandown Park Tasman </h1><h2> Sandown Park, February 21st </h2><p>Finished 2nd</p><iframe width="560" height="315" src="https://www.youtube.com/embed/14KBYTrlnI4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+		});
+
+
+
+		addMarker({
+			coords:{lat:-41.578889, lng:147.123611},
+			content:'<h1> Australian GP </h1><h2> Longford, March 1st </h2><p>Finished 5th</p><iframe width="560" height="315" src="https://www.youtube.com/embed/aQvelYU9tqc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+		});
+
+
+		addMarker({
+			coords:{lat:-27.231200, lng:152.970290},
+			content:'<h1> Lakeside Tasman </h1><h2> Lakeside, March 7th</h2><p>Finished 1st</p>'
+		});
+
+
+
+
+
+
+
+		function addMarker(props){
+			var marker = new google.maps.Marker({
+			position:props.coords,
+			map:map,
+		});
+			if(props.content){
+			var infoWindow = new google.maps.InfoWindow({
+			content: props.content
+		});
+
+		marker.addListener('click', function(){
+			infoWindow.open(map, marker);
+		})
+		}
+
+		}
+
+
+
+
+}
+
+
+
+
+</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPPqa67ybpvOLl7lsSZr5deWxFbSedyYA&callback=initMap"
+    async defer></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
