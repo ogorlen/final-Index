@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lotus 33 formula 1 championship</title>
+
+
+
+	<style type="text/css">
+	#map{
+		position: absolute;
+		left: 5%;
+		height: 100%;
+		width: 100%;
+		/*left: 15%;*/
+	}	
+
+	/*#menu{
+		position: relative;
+		height: 100%;
+		widows: 20%;
+	}*/
+
+
+
+
+
+	</style>
+
+
+
+</head>
+<body>
+
+
+
+<div id="map"></div>
+
+<script type="text/javascript">
+	
+	// function initMap(){
+	// 	var options = {
+	// 		zoom: 15,
+	// 		center:{lat:56.385150, lng:-2.993130}
+	// 	}
+	// 	// use this for styling 
+	// 	// https://mapstyle.withgoogle.com
+	// 	// https://developers.google.com/maps/documentation/javascript/styling
+
+
+	// 	var map = new google.maps.Map(document.getElementById('map'), options);
+
+
+ // var marker = new google.maps.Marker({
+ //    position: {lat:56.385150, lng:-2.993130},
+ //    map: map,
+ //    title: 'Hello World!'
+ //  });
+	// }
+
+ function initMap(){
+		var options = {
+			zoom: 1,
+			center:{lat:56.385150, lng:-2.993130}
+		}
+
+		var map = new google.maps.Map(document.getElementById('map'), options);
+
+
+		var map = new
+		google.maps.Map(document.getElementById('map'),options);
+
+		// var marker = new google.maps.Marker({
+		// 	position:{lat:56.385150, lng:-2.993130},
+		// 	map:map,
+		// });
+
+		// var infoWindow = new google.maps.InfoWindow({
+		// 	content: '<h1> gg </h1>'
+		// });
+
+		// marker.addListener('click', function(){
+		// 	infoWindow.open(map, marker);
+		// })
+
+
+		addMarker({
+			coords:{lat:51.357734, lng:0.261622},
+			content:'<h1> The Ilford Trophy - Race of Champions</h1><h2> Brands Hatch, March 13 </h2><p> Retired from the race due to wheel issue </p>'
+		});
+
+
+		addMarker({
+			coords:{lat:52.465679, lng:0.955561},
+			content:'<h1> Snetterton </h1><h2> Snetterton, April 4th</h2><p> Finished 5th</p>',
+			});
+
+		addMarker({
+			coords:{lat:50.870870, lng:-0.740720},
+			content:'<h1> Internation Trophy Meeting - St. Marys Trophy Race </h1><h2> Goodwood, April 19th</h2><p> Finished 1st</p>',
+			});
+
+	addMarker({
+			coords:{lat:51.420989, lng:-0.069472},
+			content:'<h1> The Norbury trophy / The Anerley Trophy </h1><h2> Crystal Palace, June 7th</h2><p> Finished 2nd </p>'
+		});
+
+
+		addMarker({
+			coords:{lat:53.178798, lng:-2.617223},
+			content:'<h1> Internation Gold Cup Meeting - Saloon Car Race </h1><h2> Oulton Park, September 18th </h2><p>Finished 1st</p>'
+		});
+
+
+
+
+
+
+
+
+
+
+
+
+
+		function addMarker(props){
+			var marker = new google.maps.Marker({
+			position:props.coords,
+			map:map,
+		});
+			if(props.content){
+			var infoWindow = new google.maps.InfoWindow({
+			content: props.content
+		});
+
+		marker.addListener('click', function(){
+			infoWindow.open(map, marker);
+		})
+		}
+
+		}
+
+
+
+
+}
+
+
+
+
+</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPPqa67ybpvOLl7lsSZr5deWxFbSedyYA&callback=initMap"
+    async defer></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
