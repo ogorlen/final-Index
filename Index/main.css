@@ -49,11 +49,12 @@ margin: 0;
 }
 
 .dmodel{
-	color: white;
+/*color: white;
 	position: absolute;
 	left: 40%;
+	width: 55%;
 	top: 30%;
-	margin: 2%;
+	margin: 0;
 	font-size: 8vh;
 	line-height: 6vh;
 	font-family: covik-sans-mono, sans-serif;
@@ -67,27 +68,47 @@ text-decoration: none;
 	top: 50%;
 	left: 50%;
 	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);*/
+	color: white;
+	
+
+	width: 90%;
+	font-size: 8vh;
+	line-height: 6vh;
+
+	font-family: covik-sans-mono, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	text-decoration: none;
+	text-align: center;
+
+	margin: 0;
+  	position: absolute;
+  	top: 50%;
+ 	left: 50%;
+ 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
 
 .clark{
 	color: white;
-	position: absolute;
-	left: 40%;
-	top: 40%;
-	margin: 2%;
+	
+
+	width: 90%;
 	font-size: 8vh;
-		line-height: 5vh;
+	line-height: 6vh;
 
 	font-family: covik-sans-mono, sans-serif;
-font-weight: 700;
-font-style: normal;
-text-decoration: none;
+	font-weight: 700;
+	font-style: normal;
+	text-decoration: none;
+	text-align: center;
+
 	margin: 0;
-	position: absolute;
-	top: 65%;
-	left: 50%;
-	-ms-transform: translate(-50%, -50%);
+  	position: absolute;
+  	top: 65%;
+ 	left: 50%;
+ 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 
 }
