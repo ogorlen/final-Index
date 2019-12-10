@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lotus 33 formula 1 championship</title>
+
+
+
+	<style type="text/css">
+	#map{
+		position: absolute;
+		/*left: 5%;*/
+		height: 100%;
+		width: 100%;
+		/*left: 15%;*/
+	}	
+
+	/*#menu{
+		position: relative;
+		height: 100%;
+		widows: 20%;
+	}*/
+
+
+
+
+
+	</style>
+
+
+
+</head>
+<body>
+
+
+
+<div id="map"></div>
+
+<script type="text/javascript">
+	
+	// function initMap(){
+	// 	var options = {
+	// 		zoom: 15,
+	// 		center:{lat:56.385150, lng:-2.993130}
+	// 	}
+	// 	// use this for styling 
+	// 	// https://mapstyle.withgoogle.com
+	// 	// https://developers.google.com/maps/documentation/javascript/styling
+
+
+	// 	var map = new google.maps.Map(document.getElementById('map'), options);
+
+
+ // var marker = new google.maps.Marker({
+ //    position: {lat:56.385150, lng:-2.993130},
+ //    map: map,
+ //    title: 'Hello World!'
+ //  });
+	// }
+
+ function initMap(){
+		var options = {
+			zoom: 1,
+			center:{lat:56.385150, lng:-2.993130}
+			// styles:
+
+		}
+
+		
+
+		var map = new google.maps.Map(document.getElementById('map'),options);
+
+		// var marker = new google.maps.Marker({
+		// 	position:{lat:56.385150, lng:-2.993130},
+		// 	map:map,
+		// });
+
+		// var infoWindow = new google.maps.InfoWindow({
+		// 	content: '<h1> gg </h1>'
+		// });
+
+		// marker.addListener('click', function(){
+		// 	infoWindow.open(map, marker);
+		// })
+
+
+
+		addMarker({
+			coords:{lat:-33.052540, lng:27.868450},
+			icon:'file:///Users/ogorlen/Desktop/ACTIII/The%20Main/1.png',
+			content:'<h1> South African GP </h1><h2> East London, January 1st </h2><p> Finished 1st in the race fully dominating</p>',
+
+			});
+		addMarker({
+			coords:{lat:50.450661, lng:5.957840},
+			content:'<h1> Belgian GP</h1><h2> Spa-Francorchamps, June 13th</h2><p> The race track that Jim Clarck hated the most, but that didnt stop him from winning</p><iframe width="560" height="315" src="https://www.youtube.com/embed/igXcFOV0gcc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+		});
+		
+		addMarker({
+			coords:{lat:45.730050, lng:3.065330},
+			content:'<h1> French GP</h1><h2> Clermont-Ferrand, June 26th </h2><p>Finished 1st</p><iframe width="560" height="315" src="https://www.youtube.com/embed/gPHbRI6biNs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+		});
+
+
+		addMarker({
+			coords:{lat:52.078121, lng:-1.021540},
+			content:'<h1> British GP</h1><h2> Silverstone, July 10th </h2><p>Finished 1st</p><iframe width="560" height="315" src="https://www.youtube.com/embed/qb2S2f7mJDQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+		});
+
+
+		addMarker({
+			coords:{lat:52.389061, lng:4.541380},
+			content:'<h1> Dutch GP</h1><h2> Zandvoort, July 18th </h2><p>Finished 1st</p><iframe width="560" height="315" src="https://www.youtube.com/embed/uCL-FmPKvZM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+		});
+		
+		addMarker({
+			coords:{lat:50.329430, lng:6.828510},
+			content:'<h1> German GP </h1><h2> Nurburgring, August 1st </h2><p>Finished 1st</p><iframe width="560" height="315" src="https://www.youtube.com/embed/whm1gMzvUoE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+		});
+
+		addMarker({
+			coords:{lat:45.608608, lng:9.283890},
+			content:'<h1> Italian GP </h1><h2> Monza, September 12th </h2><p>Finished 10th</p>'
+		});
+
+		addMarker({
+			coords:{lat:42.340160, lng:-76.925240},
+			content:'<h1> United States GP </h1><h2> Watkins Glen, October 3rd </h2><p> Retired from the race</p>'
+		});
+
+		addMarker({
+			coords:{lat:19.407780, lng:-99.087890},
+			content:'<h1> Mexican GP </h1><h2> Mexico City, October24th </h2><p> Retired from the race</p>'
+		});
+
+
+
+
+
+
+
+
+		function addMarker(props){
+			var marker = new google.maps.Marker({
+			position:props.coords,
+			map:map,
+		});
+			if(props.content){
+			var infoWindow = new google.maps.InfoWindow({
+			content: props.content
+		});
+
+		marker.addListener('click', function(){
+			infoWindow.open(map, marker);
+		})
+		}
+
+		}
+
+
+
+
+}
+
+
+
+
+</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPPqa67ybpvOLl7lsSZr5deWxFbSedyYA&callback=initMap"
+    async defer></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
+
